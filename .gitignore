@@ -30,5 +30,21 @@
 *.exe
 *.out
 *.app
-*.vscode
-*build*
+
+# Build Directories
+build/
+*-build/
+build-*/
+out/
+
+# QT Build Artifacts
+CMakeLists.txt.use*
+
+#VS Code Artifacts
+ipch/
+.vscode
+.vs
+.cache
+
+# MATLAB 
+*.m~
