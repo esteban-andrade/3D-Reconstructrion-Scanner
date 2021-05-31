@@ -10,7 +10,7 @@ print(pcd)
 print(np.asarray(pcd.points))
 o3d.visualization.draw_geometries([pcd])
 
-saver = True
+saver = False
 
 if saver== True:
     print("\n.................Generating Files..............\n")

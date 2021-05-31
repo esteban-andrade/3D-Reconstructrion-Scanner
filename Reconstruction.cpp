@@ -428,8 +428,8 @@ bool Reconstruction::transformVerification(pcl::PointCloud<pcl::PointXYZRGBNorma
     Eigen::Matrix4f transform_analysis = cloud_analysis1_transform * cloud_analysis2_transform.inverse();
     std::cout
         << "\n"
-        << currentDateTime() << "\tTranslation Error in cm= " << translation_error * 100 << " %\t Rotation Error in cm = "
-        << rotation_error * 100 << " %\n"
+        << currentDateTime() << "\tTranslation Error in cm= " << translation_error * 100 << " \t Rotation Error in cm = "
+        << rotation_error * 100 << " \n"
         << "\n\t\t T1*T2` = \n"
         << transform_analysis
         << std::endl;
