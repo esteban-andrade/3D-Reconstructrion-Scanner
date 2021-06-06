@@ -148,8 +148,8 @@ public:
     void pointCloudClustering(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &);
 
     /**
-     * @brief 
-     * 
+     * @brief This API aims to smooth the surface of the PointCloud via MLS (MovingLeastSquares).
+     * @note Furthermore, it also upsamples the point cloudto a defined parameter usingRANDOM_UNIFORM_DENSITY as the prefered method. This specific API uses a Kdtree for data searching and it is required to specify theSearch Radiusfor determiningthe k-nearest neighbor for best fitting. This method required an input point cloud,and it will output a smoothed and upsampled point cloud
      * 
      * @param reference_cloud: input cloud
      * @param target_cloud: output cloud 
@@ -157,15 +157,20 @@ public:
     void pointCloudNormaliseUpscale(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &);
 
     /**
-     * @brief 
-     * 
+     * @brief his API will require an input pointcloud and it will generatea reconstructed Polymesh based on the Poisson Reconstruction Algorithm
+    *  @param reference_cloud: input cloud
+     * @param target_mesh: output mesh  
      */
     void poissonReconstruction(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PolygonMesh::Ptr &);
 
     /**
      * @brief 
      * 
-     * @return std::vector<pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr> 
+     * @param input_cloud_1: Target Point cloud
+     * @param input_cloud_2: Reference Point cloud
+     * @param adjuster the initial pointcloud will be the one that is adjusted Selection
+     * @param primaryAxisOnly Axis Selection(Single or multiple)
+     * @return std::vector<pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr> of Scaled Point Cloud. The first element is the scaled cloud whereas the second one is the refence point cloud.
      */
     std::vector<pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr> pointCloudScaleAdjustment(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, bool, bool); //first object is target pcl and second one is reference
     
@@ -177,53 +182,67 @@ public:
     std::vector<double> getScale();
 
     /**
-     * @brief 
-     * 
+     * @brief Convert point cloud to polymesh
+     * @param ref_cloud Reference Point cloud
+     * @param mesh outout mesh
      */
     void cloudToPolyMesh(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &,
                          pcl::PolygonMesh::Ptr &);
 
     /**
-     * @brief 
-     * 
-     * @return std::vector<pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr> 
+     * @brief Manual Adjuster method
+     * @param input_cloud Input Point cloud
+     * @param scale required scale
+     * @return std::vector<pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr>  output cloud
      */
     std::vector<pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr> manualScaleAdjuster(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, double);
-    
+
     /**
-     * @brief 
-     * 
+     * @brief Convert point cloud to ply file
+     * @param target_clopud output Point cloud
+     * @param ply_file File and path of file
      */
     void convertPLYtoPCL(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, std::string);
-    
+
     /**
-     * @brief 
-     * 
+     * @brief Convert polymesh to ply file
+     * @param input input Point cloud
+     * @param target_path File and path of file
      */
     void convertPolyMeshtoPLY(pcl::PolygonMesh::Ptr &, std::string);
-    
+
     /**
-     * @brief 
+     * @brief This API aims to downsample the input point-cloud through a voxel grid filter
      * 
+     * @param input_cloud input Point cloud
+     * @param target_cloud Output point cloud
+     * @param lx x dimension of voxel
+     * @param ly y dimension of voxel
+     * @param lz x dimension of voxel
      */
     void downsamplePointCloudVoxelGrid(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, float, float, float);
-    
+
     /**
-     * @brief 
-     * 
+     * @brief Convert point cloud to ply file
+     * @param input input Point cloud
+     * @param target_path File and path of file 
      */
     void convertPCLtoPLY(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, std::string);
-    
+
     /**
-     * @brief 
-     * 
+     * @brief Imports ply file to polymesh
+     * @param path path of ply file 
+     * @param target target polymesh
      */
     void importPLYtoPolymesh(std::string, pcl::PolygonMesh::Ptr&);
-    
-    
+
     /**
-     * @brief 
-     * 
+     * @brief This API aims to filter a specific point cloud based on the specificaxis limit, which is known as passThroughFilter
+     * @param reference_cloud: input cloud
+     * @param target_cloud: output cloud 
+     * @param field_name axis
+     * @param min_limit Minimum limit
+     * @param max_limit Maximum Limit
      */
     void passThroughFilter(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, std::string, float, float);
 
@@ -236,40 +255,54 @@ public:
      * @param std_threshold  Sets the standard deviation multipler threshold
      */
     void pointCloudOutliersFilterManual(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, int, double);
-    
+
     /**
-     * @brief 
+     * @brief This API is designed to Input a specific point cloud and runan Euclidean Cluster Extraction (
+     * @note The Clusterized point cloudwill output the biggest point cloud cluster as the valid target point cloud. In orderto define a cluster, it is crucial to determine theMinimum Cluster Size and theCluster Tolerance.Once all the clusters are generated, these will be stacked in avector. In this vector, an algorithm will iterate throughout all elements and comparetheir cluster size. Based on this process, it will output the largest cluster as the validoutput point cloud
      * 
+     * @param reference_cloud: input cloud
+     * @param target_cloud: output cloud
+     * @param threshold Threshold value determination
+     * @param iteration Number of iterations
      */
     void pointCloudPlaneSegmentOperationManual(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, double, double);
-    
+
     /**
-     * @brief 
-     * 
+     * @brief This API aims to align two given pointcloud to its corresponding centroi
+     * @param reference_cloud: input cloud
+     * @param target_cloud: output cloud
+     * @param x_axis x axis radian adjustment
+     * @param y_axis y axis radian adjustment
+     * @param z_axis z axis radian adjustment
      */
     void pointCloudCentroidAlignmentAdjusment(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, double, double, double);
-    
+
     /**
-     * @brief 
-     * 
+     * @brief Normalizes the normals
+     * @param reference_cloud: input cloud
      */
     void normalsReAdjustement(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &);
-    
+
     /**
-     * @brief 
-     * 
+     *  @brief Adjuste normals
+     *  @param reference: input cloud
+     *  @param target: output cloud
      */
     void normalsTesting(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &);
-    
+
     /**
-     * @brief 
-     * 
+     *  @brief This API will transform one point cloud based on the input reference point cloud and use that transform pose.
+     *  @param reference_for_transform: input cloud. The transform will be extracted from here
+     *  @param reference: Input cloud
+     *  @param target: output cloud
      */
     void transformPointCloud(pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &, pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr &);
-    
+
     /**
-     * @brief 
+     * @brief It will verify the transform and check based on a given thershold
      * 
+     * @param cloud1:  cloud 1
+     * @param cloud2: cloud 2
      * @return true 
      * @return false 
      */

@@ -1,28 +1,28 @@
 #include "Reconstruction.h"
 
-static const int MEAN_K = 100;
-static const double STD_DEV_MULTRESH = 2.5; //0.9 //2.5 //1.5
+static const int MEAN_K = 100;              //!< MeanK for filtering
+static const double STD_DEV_MULTRESH = 2.5; //!< standard deviation thershold  //0.9 //2.5 //1.5
 /*************************************************/
-static const double PLANE_SEGMENTATION_THRESHOLD = 0.001; //0.01 // 0.001
-static const double PLANE_SEGMENTATION_ITER = 10000;      //10000
+static const double PLANE_SEGMENTATION_THRESHOLD = 0.001; //!< Plane segmentation thershold //0.01 // 0.001
+static const double PLANE_SEGMENTATION_ITER = 10000;      //!< Plane segmentation Iteration  //10000
 /*************************************************/
-static const double CLUSTER_TOLERANCE = 0.02;
-static const int MIN_CLUSTER_SIZE = 100;
+static const double CLUSTER_TOLERANCE = 0.02; //!< Clustering Tolerance
+static const int MIN_CLUSTER_SIZE = 100;      //!< Minimum cluster Size
 /**************************************************/
-static const int MLS_POLYNOMIAL_ORDER = 2;
-static const double MLS_SEARCH_RADIUS = 0.01;          //0.01
-static const int UPSAMPLE_DESIRED_POINT_DENSITY = 100; //100
+static const int MLS_POLYNOMIAL_ORDER = 2;             //!< MLS Order
+static const double MLS_SEARCH_RADIUS = 0.01;          //!<   MLS Search Radius //0.01
+static const int UPSAMPLE_DESIRED_POINT_DENSITY = 100; //!<  Desired upsample point cloud density //100
 /**************************************************/
-static const int POISSON_DEPTH = 7;     //10 //7
-static const int POISSON_MIN_DEPTH = 5; //7 //5
-static const float POISSON_SAMPLES_PER_NODE = 30.0f;
-static const int POISSON_SOLVER_DIVIDER = 8;
-static const int POISSON_ISO_DIVIDER = 8;
-static const int POISSON_DEGREE = 2;
-static const float POISSON_POINT_WEIGHT = 2.0f;
-static const float POISSON_SET_SCALE = 1.0f;
+static const int POISSON_DEPTH = 7;                  //!<  Poisson Depth  //10 //7
+static const int POISSON_MIN_DEPTH = 5;              //!<  Poission Minimum Depth //7 //5
+static const float POISSON_SAMPLES_PER_NODE = 30.0f; //!< Possion Sets samples per node 
+static const int POISSON_SOLVER_DIVIDER = 8;         //!< Poisson Solver  Divider
+static const int POISSON_ISO_DIVIDER = 8;            //!< Possion ISO devider
+static const int POISSON_DEGREE = 2;                 //!< Possion Degreeof equation
+static const float POISSON_POINT_WEIGHT = 2.0f;      //!< Desired POission Point weight
+static const float POISSON_SET_SCALE = 1.0f;         //!< Poisson Configured Scale
 /*************************************************/
-static const double pose_error_cm_threshold = 10;
+static const double pose_error_cm_threshold = 10; //!< Configured desired threshold for transform verification
 
 const std::string
 currentDateTime()
