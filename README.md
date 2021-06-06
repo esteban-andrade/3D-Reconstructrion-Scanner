@@ -18,8 +18,8 @@ NVIDIA CUDA-enabled GPU (built with cuda-10 compatible with compute capability 3
 ### Installation
 Meshroom can be installed with the following links.
 
-[GitHub Repo](https://github.com/alicevision/meshroom).
-[Alice Vision](https://alicevision.org/#meshroom)
+- [GitHub Repo](https://github.com/alicevision/meshroom).
+- [Alice Vision](https://alicevision.org/#meshroom)
 
 ## How to use
 
