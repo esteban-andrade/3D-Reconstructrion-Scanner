@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: 41012 Assignment 2:</title>
+<title>Reconstruction: Reconstruction:</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Reconstruction
    </div>
   </td>
  </tr>
@@ -59,73 +59,26 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">41012 Assignment 2: </div>  </div>
+<div class="title"><a class="el" href="classReconstruction.html" title="The Class Reconstruction is used process the target pointcloud. It contain many implemeted algorithms...">Reconstruction</a>: </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Threading,Synchronisation and Data Integrity. An aircraft is patrolling space surrounding a base station. The aircrafts task is to localise enemy aircraft (bogies) that enters the airspace and intercept the aircraft.</p>
-<h1><a class="anchor" id="Description"></a>
-Description</h1>
-<p>Write a program in C++ using object oriented paradigms that shares data originating from a range of Mechatronics sensors between a number of threads. Ensure data integrity between threads and enable relating data between them via suitable data structure that enables time synchronisation and subsequently interpolation of data for task at hand. Supply appropriate auto-generated documentation utilising inline source mark-up</p>
-<h2><a class="anchor" id="Rationale"></a>
-Rationale</h2>
-<p>In a Mechatronics System, sensors produce data at varying rates. Decisions need to be made based on correctly associated data in near real-time. Threading and synchronisation are ways to ensure the system performs as intended, with guarantees on the responsiveness of the system to incoming data changes, processing constraints and system behaviour.</p>
+<div class="textblock"><p>This will be the developed framework software for a 3D software. This framework will use phogrammetric software to produce the reconstruction and a series of algorithms that are used in this framework.</p>
+<p>The framework will be used for processing, filtering, scaling and reconstructing the final mesh obtained from the photogrammetric process.</p>
+<dl class="section author"><dt>Author</dt><dd>Esteban Andrade</dd></dl>
 <h1><a class="anchor" id="Details"></a>
 Details</h1>
-<ul>
-<li>Student Name: Esteban Andrade<br />
-</li>
-<li>Student ID: 12824583</li>
-</ul>
-<h1><a class="anchor" id="Notes"></a>
-Notes</h1>
-<p>There is a debug section in the DataSynchronization Class. This was used for debugging all the predictions based on the speed and locations of the bogies.</p>
-<pre class="fragment">//#define DEBUG 1
-Uncomment this section to allow this to be displayed.</pre><h1><a class="anchor" id="Algorithms"></a>
-Algorithms</h1>
-<p>The algorithms and concepts used include:</p><ul>
-<li>Pure Pursuit</li>
-<li>P Cotroller</li>
-<li>Projectile Motion</li>
-</ul>
-<h2><a class="anchor" id="ac_doc_"></a>
-Pure Pursuit</h2>
-<p>The Pure pursuit Algorith will be used in order to start chansing the bogies The heart of the pure pursuit controller is directing the aircraft to travel along an arc from the current location to the goal point. This goal point is called the ​ lookahead point ​ and it is a point on the path that is the ​ lookahead distance from the aircraft. As the robot moves along the path, it aims for the lookahead point, which moves down the path with the robot. In this way, the robot can be considered to “pursue” the lookahead point. The lookahead point will be the predicted bogie position All this analysis will be done in reference from the friendly to the bogie. The point ( x, y ) which is one look-ahead distance l from the robot is one of points on the path.The Formulas include </p><pre class="fragment">  x^2 +y^2 = L^2
-  x+D = r
-  D = r-x
-  (r-x)^2+y^2=r^2
-  r^2-2rx+x^2+y^2=r^2
-  2rx=L^2
-  r= L^2/2x
-  gamma = 2x/L^2
-
-  In order to obtain x, using ax+by+c=0
- a = − tan(robot angle)
- b =1
- c = tan(robot angle) * robot x − robot y
- The point-line distance formula is:
- d = | ax + b y + c | / √ {a^2 + b^2}
- x = | a * lookahead x + b * lookahead y + c | / √{a^2 + b^2}
- with this angle gamma we can have a relationship between the linear and angular velocity:
- w(omega) = gamma *(linear velocity)
-</pre><h2><a class="anchor" id="ac_doc_PI_Cotroller"></a>
-PI Cotroller</h2>
-<p>A PI controller was used in order to improve the navigation and steering paramaters. Where a gain K will be used to make the friendly either:</p><ul>
-<li>Turn fast toward look-ahead point direction.</li>
-<li>Turn slowly toward look-ahead point direction</li>
-</ul>
-<p>This gain will either increase or decrease both angular speed and linear speed in order to improve navigation. </p><pre class="fragment">This value was simplifies as K, in order to maintain the 6G constrain and be easily modified 
-Kp+KI/s
-K+K/s
-</pre><h2><a class="anchor" id="ac_doc_Projectile_Motion"></a>
-Projectile Motion</h2>
-<p>The concept of projectile motion was used in order to predict the future position of the bogies. For this two simple positions with their respective timestamp were taken. With this we can calculate the distance travelled in x and y and with the given different in timestamp we can obtain the velocity vector. Once the velocity vector was used and gith a given offset in time in the future we can predict the future location of the bogies. </p><pre class="fragment">vx = (second x - original x) /  time difference
-vy = (second y - original y) /  time difference
-predicted x = second x + velocity x * (time difference + future offset);
-predicted y = second y + velocity y * (time difference + future offset);
-</pre><h2><a class="anchor" id="Notes"></a>
-Notes</h2>
-<p>In occasions the predicted orientation will have a small offset. However it will adjust and correct itself after a few iterations </p>
-</div></div><!-- contents -->
+<p>The details of this are defined in the Thesis document.</p>
+<p>In order to text different values refer to the APIs and test based on different datasets. For Further Dodumentation refer to the Git Repository</p>
+<p><a href="https://github.com/esteban-andrade/3D-Reconstructrion-Scanner">https://github.com/esteban-andrade/3D-Reconstructrion-Scanner</a></p>
+<h2><a class="anchor" id="Execution"></a>
+Execution</h2>
+<p>For execution after the project has been compile run:</p>
+<pre class="fragment">./3D_reconstruction_pipeline [Path_to_referenceFile] [Path_to_SCaling_file] [yes/no](Generate output files)
+</pre><h2><a class="anchor" id=""></a>
+</h2>
+<p>Run Open3D python Script</p>
+<pre class="fragment">python3 python3 poisson_open3d.py
+</pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

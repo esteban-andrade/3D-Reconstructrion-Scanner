@@ -10,6 +10,7 @@ print(pcd)
 print(np.asarray(pcd.points))
 o3d.visualization.draw_geometries([pcd])
 
+
 saver = True
 
 if saver== True:
@@ -19,15 +20,6 @@ pcd.normals = o3d.utility.Vector3dVector(np.zeros(
     (1, 3)))  # invalidate existing normals
 
 pcd.estimate_normals()
-#o3d.visualization.draw_geometries([pcd], point_show_normal=True)
-
-# print('run Poisson surface reconstruction')
-# with o3d.utility.VerbosityContextManager(
-#         o3d.utility.VerbosityLevel.Debug) as cm:
-#     mesh, densities = o3d.geometry.TriangleMesh.create_from_point_cloud_poisson(
-#         pcd, depth=9)
-# print(mesh)
-# o3d.visualization.draw_geometries([mesh])
 
 pcd.orient_normals_consistent_tangent_plane(10) #10
 #o3d.visualization.draw_geometries([pcd], point_show_normal=True)
@@ -80,15 +72,7 @@ pcd2.normals = o3d.utility.Vector3dVector(np.zeros(
     (1, 3)))  # invalidate existing normals
 
 pcd2.estimate_normals()
-#o3d.visualization.draw_geometries([pcd], point_show_normal=True)
 
-# print('run Poisson surface reconstruction')
-# with o3d.utility.VerbosityContextManager(
-#         o3d.utility.VerbosityLevel.Debug) as cm:
-#     mesh, densities = o3d.geometry.TriangleMesh.create_from_point_cloud_poisson(
-#         pcd, depth=9)
-# print(mesh)
-# o3d.visualization.draw_geometries([mesh])
 
 pcd2.orient_normals_consistent_tangent_plane(10)  # 10
 #o3d.visualization.draw_geometries([pcd], point_show_normal=True)

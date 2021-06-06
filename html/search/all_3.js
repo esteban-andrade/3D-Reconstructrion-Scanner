@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getscale',['getScale',['../classReconstruction.html#aa26b3c0a0b3739c330b2c48f874c15c9',1,'Reconstruction']]]
+  ['downsamplepointcloudvoxelgrid',['downsamplePointCloudVoxelGrid',['../classReconstruction.html#a82138f7b299c7047f53181b6abb70c81',1,'Reconstruction']]]
 ];

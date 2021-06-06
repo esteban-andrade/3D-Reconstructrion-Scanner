@@ -1,20 +1,95 @@
 \hypertarget{classicp}{}\section{icp Class Reference}
 \label{classicp}\index{icp@{icp}}
+
+
+Main I\+CP class.  
+
+
+
+
+{\ttfamily \#include $<$icp.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{classicp_a16dfbc3ddb18a613cfd4fb8861d0c16a}{icp} (std\+::string, int bin)
+\begin{DoxyCompactList}\small\item\em Construct a new icp object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classicp_a4f30b3d50f65a223095db3115d6393f2}\label{classicp_a4f30b3d50f65a223095db3115d6393f2}} 
+\hyperlink{classicp_a4f30b3d50f65a223095db3115d6393f2}{icp} ()
+\begin{DoxyCompactList}\small\item\em Construct a new icp object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classicp_a4ddd15fc41c8005f7eaed9fb5b7ecf00}\label{classicp_a4ddd15fc41c8005f7eaed9fb5b7ecf00}} 
+\hyperlink{classicp_a4ddd15fc41c8005f7eaed9fb5b7ecf00}{$\sim$icp} ()
+\begin{DoxyCompactList}\small\item\em Destroy the icp object. \end{DoxyCompactList}\item 
+void \hyperlink{classicp_aca508e79450dce34131b83ed2a4a1d95}{process\+Generation} (std\+::string, int bin)
+\begin{DoxyCompactList}\small\item\em Start Process generation files. \end{DoxyCompactList}\item 
+double \hyperlink{classicp_af5adbefb80bcd764306af7361e2a532a}{get\+I\+C\+Pscale} (std\+::vector$<$ std\+::string $>$ \&)
+\begin{DoxyCompactList}\small\item\em Obtain the I\+CP scale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main I\+CP class. 
+
+\subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classicp_a16dfbc3ddb18a613cfd4fb8861d0c16a}\label{classicp_a16dfbc3ddb18a613cfd4fb8861d0c16a}} 
-{\bfseries icp} (std\+::string, int bin)
-\item 
-\mbox{\Hypertarget{classicp_aca508e79450dce34131b83ed2a4a1d95}\label{classicp_aca508e79450dce34131b83ed2a4a1d95}} 
-void {\bfseries process\+Generation} (std\+::string, int bin)
-\item 
+\index{icp@{icp}!icp@{icp}}
+\index{icp@{icp}!icp@{icp}}
+\subsubsection{\texorpdfstring{icp()}{icp()}}
+{\footnotesize\ttfamily icp\+::icp (\begin{DoxyParamCaption}\item[{std\+::string}]{plyname,  }\item[{int}]{bin }\end{DoxyParamCaption})}
+
+
+
+Construct a new icp object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plyname} & name of plyfile \\
+\hline
+{\em bin} & Image \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{classicp_af5adbefb80bcd764306af7361e2a532a}\label{classicp_af5adbefb80bcd764306af7361e2a532a}} 
-double {\bfseries get\+I\+C\+Pscale} (std\+::vector$<$ std\+::string $>$ \&)
-\end{DoxyCompactItemize}
+\index{icp@{icp}!get\+I\+C\+Pscale@{get\+I\+C\+Pscale}}
+\index{get\+I\+C\+Pscale@{get\+I\+C\+Pscale}!icp@{icp}}
+\subsubsection{\texorpdfstring{get\+I\+C\+Pscale()}{getICPscale()}}
+{\footnotesize\ttfamily double icp\+::get\+I\+C\+Pscale (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{files }\end{DoxyParamCaption})}
+
+
+
+Obtain the I\+CP scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em files-\/} & vector of files names of process\+Generation output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double (scale) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classicp_aca508e79450dce34131b83ed2a4a1d95}\label{classicp_aca508e79450dce34131b83ed2a4a1d95}} 
+\index{icp@{icp}!process\+Generation@{process\+Generation}}
+\index{process\+Generation@{process\+Generation}!icp@{icp}}
+\subsubsection{\texorpdfstring{process\+Generation()}{processGeneration()}}
+{\footnotesize\ttfamily void icp\+::process\+Generation (\begin{DoxyParamCaption}\item[{std\+::string}]{plyname,  }\item[{int}]{bin }\end{DoxyParamCaption})}
+
+
+
+Start Process generation files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plyname} & name of plyfile \\
+\hline
+{\em bin} & Image \\
+\hline
+{\em bin} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-icp.\+h\item 
+\hyperlink{icp_8h}{icp.\+h}\item 
 icp.\+cpp\end{DoxyCompactItemize}

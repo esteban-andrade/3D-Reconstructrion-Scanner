@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setinputcloud',['setInputCloud',['../classReconstruction.html#a8be86587dfe645c245474315ae67f5e4',1,'Reconstruction']]]
+  ['manualscaleadjuster',['manualScaleAdjuster',['../classReconstruction.html#a6c2151dd4224cee397adb2b353e20e9b',1,'Reconstruction']]]
 ];

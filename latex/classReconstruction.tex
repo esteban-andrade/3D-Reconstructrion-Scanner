@@ -20,74 +20,54 @@ The Class \hyperlink{classReconstruction}{Reconstruction} is used process the ta
 \mbox{\Hypertarget{classReconstruction_a039a0f69fa30bd88ffadf608846a316d}\label{classReconstruction_a039a0f69fa30bd88ffadf608846a316d}} 
 \hyperlink{classReconstruction_a039a0f69fa30bd88ffadf608846a316d}{$\sim$\+Reconstruction} ()
 \begin{DoxyCompactList}\small\item\em Destroy the \hyperlink{classReconstruction}{Reconstruction} object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classReconstruction_a8be86587dfe645c245474315ae67f5e4}\label{classReconstruction_a8be86587dfe645c245474315ae67f5e4}} 
 void \hyperlink{classReconstruction_a8be86587dfe645c245474315ae67f5e4}{set\+Input\+Cloud} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string, bool)
 \begin{DoxyCompactList}\small\item\em Set the Input Cloud object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classReconstruction_a16d79600ed8684f67c1c56456bd9142b}\label{classReconstruction_a16d79600ed8684f67c1c56456bd9142b}} 
-void {\bfseries normals\+Direction\+Adjustment} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
-\item 
-\mbox{\Hypertarget{classReconstruction_aab58cb52a7507ed64640c5e6645f296e}\label{classReconstruction_aab58cb52a7507ed64640c5e6645f296e}} 
-void {\bfseries point\+Cloud\+Outliers\+Filter} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
-\item 
-\mbox{\Hypertarget{classReconstruction_a1ea61518d67180a5d9d131d29a1b78c8}\label{classReconstruction_a1ea61518d67180a5d9d131d29a1b78c8}} 
-void {\bfseries point\+Cloud\+Plane\+Segment\+Operation} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
-\item 
-\mbox{\Hypertarget{classReconstruction_a9249ed4c0932b9fe460fada09ce38e67}\label{classReconstruction_a9249ed4c0932b9fe460fada09ce38e67}} 
-void {\bfseries point\+Cloud\+Clustering} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
-\item 
-\mbox{\Hypertarget{classReconstruction_ad5749b9529d6f026ae9bb1084f63b276}\label{classReconstruction_ad5749b9529d6f026ae9bb1084f63b276}} 
-void {\bfseries point\+Cloud\+Normalise\+Upscale} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
-\item 
-\mbox{\Hypertarget{classReconstruction_a42571b72e2c1ca984c259f3f4d319c75}\label{classReconstruction_a42571b72e2c1ca984c259f3f4d319c75}} 
-void {\bfseries poisson\+Reconstruction} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
-\item 
+void \hyperlink{classReconstruction_a16d79600ed8684f67c1c56456bd9142b}{normals\+Direction\+Adjustment} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
+\begin{DoxyCompactList}\small\item\em Adjust the normals of the point cloud. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_aab58cb52a7507ed64640c5e6645f296e}{point\+Cloud\+Outliers\+Filter} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\begin{DoxyCompactList}\small\item\em This A\+PI takes an reference cloud and outputs a processedpoint cloud with filtered data outliers. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_a1ea61518d67180a5d9d131d29a1b78c8}{point\+Cloud\+Plane\+Segment\+Operation} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\begin{DoxyCompactList}\small\item\em this A\+PI is degined to input a given Point\+Cloud and output a plane segmented point cloud. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_a9249ed4c0932b9fe460fada09ce38e67}{point\+Cloud\+Clustering} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\begin{DoxyCompactList}\small\item\em This A\+PI is designed to Input a specific point cloud and runan Euclidean Cluster Extraction (. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_ad5749b9529d6f026ae9bb1084f63b276}{point\+Cloud\+Normalise\+Upscale} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\begin{DoxyCompactList}\small\item\em This A\+PI aims to smooth the surface of the Point\+Cloud via M\+LS (Moving\+Least\+Squares). \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_a42571b72e2c1ca984c259f3f4d319c75}{poisson\+Reconstruction} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
+\begin{DoxyCompactList}\small\item\em his A\+PI will require an input pointcloud and it will generatea reconstructed Polymesh based on the Poisson \hyperlink{classReconstruction}{Reconstruction} Algorithm \end{DoxyCompactList}\item 
 std\+::vector$<$ pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr $>$ \hyperlink{classReconstruction_a8e8b20ec9b384b9dad21a3accfea98f2}{point\+Cloud\+Scale\+Adjustment} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, bool, bool)
 \item 
 std\+::vector$<$ double $>$ \hyperlink{classReconstruction_aa26b3c0a0b3739c330b2c48f874c15c9}{get\+Scale} ()
 \begin{DoxyCompactList}\small\item\em Get the Scale object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classReconstruction_a1b7f0942d1540ace69e53c28d3b82023}\label{classReconstruction_a1b7f0942d1540ace69e53c28d3b82023}} 
-void {\bfseries cloud\+To\+Poly\+Mesh} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
-\item 
+void \hyperlink{classReconstruction_a1b7f0942d1540ace69e53c28d3b82023}{cloud\+To\+Poly\+Mesh} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
+\begin{DoxyCompactList}\small\item\em Convert point cloud to polymesh. \end{DoxyCompactList}\item 
 std\+::vector$<$ pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr $>$ \hyperlink{classReconstruction_a6c2151dd4224cee397adb2b353e20e9b}{manual\+Scale\+Adjuster} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, double)
-\item 
-\mbox{\Hypertarget{classReconstruction_a46cab918422a3c74bced403043968992}\label{classReconstruction_a46cab918422a3c74bced403043968992}} 
-void {\bfseries convert\+P\+L\+Yto\+P\+CL} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string)
-\item 
-\mbox{\Hypertarget{classReconstruction_afab7e493f5aee46722977acd64658c7a}\label{classReconstruction_afab7e493f5aee46722977acd64658c7a}} 
-void {\bfseries convert\+Poly\+Meshto\+P\+LY} (pcl\+::\+Polygon\+Mesh\+::\+Ptr \&, std\+::string)
-\item 
-\mbox{\Hypertarget{classReconstruction_a82138f7b299c7047f53181b6abb70c81}\label{classReconstruction_a82138f7b299c7047f53181b6abb70c81}} 
-void {\bfseries downsample\+Point\+Cloud\+Voxel\+Grid} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, float, float, float)
-\item 
-\mbox{\Hypertarget{classReconstruction_aad287c118ab81ecf00c29f55314fc237}\label{classReconstruction_aad287c118ab81ecf00c29f55314fc237}} 
-void {\bfseries convert\+P\+C\+Lto\+P\+LY} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string)
-\item 
-\mbox{\Hypertarget{classReconstruction_ac2d96a55242b1849637da44e4e32f725}\label{classReconstruction_ac2d96a55242b1849637da44e4e32f725}} 
-void {\bfseries import\+P\+L\+Yto\+Polymesh} (std\+::string, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
-\item 
-\mbox{\Hypertarget{classReconstruction_aa2b56e19c016b8c32ff99e7c5bacb515}\label{classReconstruction_aa2b56e19c016b8c32ff99e7c5bacb515}} 
-void {\bfseries pass\+Through\+Filter} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string, float, float)
-\item 
-\mbox{\Hypertarget{classReconstruction_ac7cff09bc04f6579b54932df8eb9b6ab}\label{classReconstruction_ac7cff09bc04f6579b54932df8eb9b6ab}} 
-void {\bfseries point\+Cloud\+Outliers\+Filter\+Manual} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, int, double)
-\item 
-\mbox{\Hypertarget{classReconstruction_a621af3745966b359e10c02a570658c5c}\label{classReconstruction_a621af3745966b359e10c02a570658c5c}} 
-void {\bfseries point\+Cloud\+Plane\+Segment\+Operation\+Manual} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, double, double)
-\item 
-\mbox{\Hypertarget{classReconstruction_a0c9482066c467e769715d5ffde762225}\label{classReconstruction_a0c9482066c467e769715d5ffde762225}} 
-void {\bfseries point\+Cloud\+Centroid\+Alignment\+Adjusment} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, double, double, double)
-\item 
-\mbox{\Hypertarget{classReconstruction_adbc413f7611f3984cbfcff77b9c23df6}\label{classReconstruction_adbc413f7611f3984cbfcff77b9c23df6}} 
-void {\bfseries normals\+Re\+Adjustement} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
-\item 
-\mbox{\Hypertarget{classReconstruction_ab8b679093ca295de818b4bdf84ec79af}\label{classReconstruction_ab8b679093ca295de818b4bdf84ec79af}} 
-void {\bfseries normals\+Testing} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
-\item 
-\mbox{\Hypertarget{classReconstruction_a74cf80cebcf9600860881f57a8986823}\label{classReconstruction_a74cf80cebcf9600860881f57a8986823}} 
-void {\bfseries transform\+Point\+Cloud} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
-\item 
+\begin{DoxyCompactList}\small\item\em Manual Adjuster method. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_a46cab918422a3c74bced403043968992}{convert\+P\+L\+Yto\+P\+CL} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string)
+\begin{DoxyCompactList}\small\item\em Convert point cloud to ply file. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_afab7e493f5aee46722977acd64658c7a}{convert\+Poly\+Meshto\+P\+LY} (pcl\+::\+Polygon\+Mesh\+::\+Ptr \&, std\+::string)
+\begin{DoxyCompactList}\small\item\em Convert polymesh to ply file. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_a82138f7b299c7047f53181b6abb70c81}{downsample\+Point\+Cloud\+Voxel\+Grid} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, float, float, float)
+\begin{DoxyCompactList}\small\item\em This A\+PI aims to downsample the input point-\/cloud through a voxel grid filter. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_aad287c118ab81ecf00c29f55314fc237}{convert\+P\+C\+Lto\+P\+LY} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string)
+\begin{DoxyCompactList}\small\item\em Convert point cloud to ply file. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_ac2d96a55242b1849637da44e4e32f725}{import\+P\+L\+Yto\+Polymesh} (std\+::string, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
+\begin{DoxyCompactList}\small\item\em Imports ply file to polymesh. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_aa2b56e19c016b8c32ff99e7c5bacb515}{pass\+Through\+Filter} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string, float, float)
+\begin{DoxyCompactList}\small\item\em This A\+PI aims to filter a specific point cloud based on the specificaxis limit, which is known as pass\+Through\+Filter. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_ac7cff09bc04f6579b54932df8eb9b6ab}{point\+Cloud\+Outliers\+Filter\+Manual} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, int, double)
+\begin{DoxyCompactList}\small\item\em This A\+PI takes an reference cloud and outputs a processedpoint cloud with filtered data outliers. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_a621af3745966b359e10c02a570658c5c}{point\+Cloud\+Plane\+Segment\+Operation\+Manual} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, double, double)
+\begin{DoxyCompactList}\small\item\em This A\+PI is designed to Input a specific point cloud and runan Euclidean Cluster Extraction (. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_a0c9482066c467e769715d5ffde762225}{point\+Cloud\+Centroid\+Alignment\+Adjusment} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, double, double, double)
+\begin{DoxyCompactList}\small\item\em This A\+PI aims to align two given pointcloud to its corresponding centroi. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_adbc413f7611f3984cbfcff77b9c23df6}{normals\+Re\+Adjustement} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\begin{DoxyCompactList}\small\item\em Normalizes the normals. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_ab8b679093ca295de818b4bdf84ec79af}{normals\+Testing} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\begin{DoxyCompactList}\small\item\em Adjuste normals. \end{DoxyCompactList}\item 
+void \hyperlink{classReconstruction_a74cf80cebcf9600860881f57a8986823}{transform\+Point\+Cloud} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\begin{DoxyCompactList}\small\item\em This A\+PI will transform one point cloud based on the input reference point cloud and use that transform pose. \end{DoxyCompactList}\item 
 bool \hyperlink{classReconstruction_a73c384d0419386505e5fe58a55b556c9}{transform\+Verification} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em It will verify the transform and check based on a given thershold. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -109,14 +89,105 @@ Only for ply file.
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em parameter-\/pointcloud} & point cloud used to hold the input mesh \\
+{\em cloud} & pointcloud point cloud used to hold the input mesh \\
 \hline
-{\em parameter-\/path} & string used to hold the path of the input file \\
+{\em path\+\_\+file} & \+: string used to hold the path of the input file \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classReconstruction_a1b7f0942d1540ace69e53c28d3b82023}\label{classReconstruction_a1b7f0942d1540ace69e53c28d3b82023}} 
+\index{Reconstruction@{Reconstruction}!cloud\+To\+Poly\+Mesh@{cloud\+To\+Poly\+Mesh}}
+\index{cloud\+To\+Poly\+Mesh@{cloud\+To\+Poly\+Mesh}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{cloud\+To\+Poly\+Mesh()}{cloudToPolyMesh()}}
+{\footnotesize\ttfamily void Reconstruction\+::cloud\+To\+Poly\+Mesh (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{ref\+\_\+cloud,  }\item[{pcl\+::\+Polygon\+Mesh\+::\+Ptr \&}]{mesh }\end{DoxyParamCaption})}
+
+
+
+Convert point cloud to polymesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref\+\_\+cloud} & Reference Point cloud \\
+\hline
+{\em mesh} & outout mesh \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_aad287c118ab81ecf00c29f55314fc237}\label{classReconstruction_aad287c118ab81ecf00c29f55314fc237}} 
+\index{Reconstruction@{Reconstruction}!convert\+P\+C\+Lto\+P\+LY@{convert\+P\+C\+Lto\+P\+LY}}
+\index{convert\+P\+C\+Lto\+P\+LY@{convert\+P\+C\+Lto\+P\+LY}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{convert\+P\+C\+Lto\+P\+L\+Y()}{convertPCLtoPLY()}}
+{\footnotesize\ttfamily void Reconstruction\+::convert\+P\+C\+Lto\+P\+LY (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{input,  }\item[{std\+::string}]{target\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Convert point cloud to ply file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input Point cloud \\
+\hline
+{\em target\+\_\+path} & File and path of file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_a46cab918422a3c74bced403043968992}\label{classReconstruction_a46cab918422a3c74bced403043968992}} 
+\index{Reconstruction@{Reconstruction}!convert\+P\+L\+Yto\+P\+CL@{convert\+P\+L\+Yto\+P\+CL}}
+\index{convert\+P\+L\+Yto\+P\+CL@{convert\+P\+L\+Yto\+P\+CL}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{convert\+P\+L\+Yto\+P\+C\+L()}{convertPLYtoPCL()}}
+{\footnotesize\ttfamily void Reconstruction\+::convert\+P\+L\+Yto\+P\+CL (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+clopud,  }\item[{std\+::string}]{ply\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Convert point cloud to ply file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+clopud} & output Point cloud \\
+\hline
+{\em ply\+\_\+file} & File and path of file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_afab7e493f5aee46722977acd64658c7a}\label{classReconstruction_afab7e493f5aee46722977acd64658c7a}} 
+\index{Reconstruction@{Reconstruction}!convert\+Poly\+Meshto\+P\+LY@{convert\+Poly\+Meshto\+P\+LY}}
+\index{convert\+Poly\+Meshto\+P\+LY@{convert\+Poly\+Meshto\+P\+LY}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{convert\+Poly\+Meshto\+P\+L\+Y()}{convertPolyMeshtoPLY()}}
+{\footnotesize\ttfamily void Reconstruction\+::convert\+Poly\+Meshto\+P\+LY (\begin{DoxyParamCaption}\item[{pcl\+::\+Polygon\+Mesh\+::\+Ptr \&}]{input,  }\item[{std\+::string}]{target\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Convert polymesh to ply file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input Point cloud \\
+\hline
+{\em target\+\_\+path} & File and path of file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_a82138f7b299c7047f53181b6abb70c81}\label{classReconstruction_a82138f7b299c7047f53181b6abb70c81}} 
+\index{Reconstruction@{Reconstruction}!downsample\+Point\+Cloud\+Voxel\+Grid@{downsample\+Point\+Cloud\+Voxel\+Grid}}
+\index{downsample\+Point\+Cloud\+Voxel\+Grid@{downsample\+Point\+Cloud\+Voxel\+Grid}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{downsample\+Point\+Cloud\+Voxel\+Grid()}{downsamplePointCloudVoxelGrid()}}
+{\footnotesize\ttfamily void Reconstruction\+::downsample\+Point\+Cloud\+Voxel\+Grid (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{input\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud,  }\item[{float}]{lx,  }\item[{float}]{ly,  }\item[{float}]{lz }\end{DoxyParamCaption})}
+
+
+
+This A\+PI aims to downsample the input point-\/cloud through a voxel grid filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+cloud} & input Point cloud \\
+\hline
+{\em target\+\_\+cloud} & Output point cloud \\
+\hline
+{\em lx} & x dimension of voxel \\
+\hline
+{\em ly} & y dimension of voxel \\
+\hline
+{\em lz} & x dimension of voxel \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classReconstruction_aa26b3c0a0b3739c330b2c48f874c15c9}\label{classReconstruction_aa26b3c0a0b3739c330b2c48f874c15c9}} 
 \index{Reconstruction@{Reconstruction}!get\+Scale@{get\+Scale}}
 \index{get\+Scale@{get\+Scale}!Reconstruction@{Reconstruction}}
@@ -130,30 +201,366 @@ Get the Scale object.
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$double$>$ 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classReconstruction_ac2d96a55242b1849637da44e4e32f725}\label{classReconstruction_ac2d96a55242b1849637da44e4e32f725}} 
+\index{Reconstruction@{Reconstruction}!import\+P\+L\+Yto\+Polymesh@{import\+P\+L\+Yto\+Polymesh}}
+\index{import\+P\+L\+Yto\+Polymesh@{import\+P\+L\+Yto\+Polymesh}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{import\+P\+L\+Yto\+Polymesh()}{importPLYtoPolymesh()}}
+{\footnotesize\ttfamily void Reconstruction\+::import\+P\+L\+Yto\+Polymesh (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{pcl\+::\+Polygon\+Mesh\+::\+Ptr \&}]{target }\end{DoxyParamCaption})}
+
+
+
+Imports ply file to polymesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & path of ply file \\
+\hline
+{\em target} & target polymesh \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classReconstruction_a6c2151dd4224cee397adb2b353e20e9b}\label{classReconstruction_a6c2151dd4224cee397adb2b353e20e9b}} 
 \index{Reconstruction@{Reconstruction}!manual\+Scale\+Adjuster@{manual\+Scale\+Adjuster}}
 \index{manual\+Scale\+Adjuster@{manual\+Scale\+Adjuster}!Reconstruction@{Reconstruction}}
 \subsubsection{\texorpdfstring{manual\+Scale\+Adjuster()}{manualScaleAdjuster()}}
 {\footnotesize\ttfamily std\+::vector$<$ pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr $>$ Reconstruction\+::manual\+Scale\+Adjuster (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{input\+\_\+cloud,  }\item[{double}]{scale }\end{DoxyParamCaption})}
 
+
+
+Manual Adjuster method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+cloud} & Input Point cloud \\
+\hline
+{\em scale} & required scale \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::vector$<$pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal$>$\+::\+Ptr$>$ 
+std\+::vector$<$pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal$>$\+::\+Ptr$>$ output cloud 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classReconstruction_a16d79600ed8684f67c1c56456bd9142b}\label{classReconstruction_a16d79600ed8684f67c1c56456bd9142b}} 
+\index{Reconstruction@{Reconstruction}!normals\+Direction\+Adjustment@{normals\+Direction\+Adjustment}}
+\index{normals\+Direction\+Adjustment@{normals\+Direction\+Adjustment}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{normals\+Direction\+Adjustment()}{normalsDirectionAdjustment()}}
+{\footnotesize\ttfamily void Reconstruction\+::normals\+Direction\+Adjustment (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud,  }\item[{pcl\+::\+Polygon\+Mesh\+::\+Ptr \&}]{mesh }\end{DoxyParamCaption})}
+
+
+
+Adjust the normals of the point cloud. 
+
+\begin{DoxyNote}{Note}
+This method is designed to input a given Pointcloudand output a different pointcloud with Adjusted Normals. It will get the vertices ofeach face and recompute the normals using the\char`\"{}right hand rule\char`\"{}. Furthermore, itwill normalize the normal vector and stack up the new normals in the output pointcloud. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+{\em mesh} & Polymesh used to adjust normals \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_adbc413f7611f3984cbfcff77b9c23df6}\label{classReconstruction_adbc413f7611f3984cbfcff77b9c23df6}} 
+\index{Reconstruction@{Reconstruction}!normals\+Re\+Adjustement@{normals\+Re\+Adjustement}}
+\index{normals\+Re\+Adjustement@{normals\+Re\+Adjustement}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{normals\+Re\+Adjustement()}{normalsReAdjustement()}}
+{\footnotesize\ttfamily void Reconstruction\+::normals\+Re\+Adjustement (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud }\end{DoxyParamCaption})}
+
+
+
+Normalizes the normals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_ab8b679093ca295de818b4bdf84ec79af}\label{classReconstruction_ab8b679093ca295de818b4bdf84ec79af}} 
+\index{Reconstruction@{Reconstruction}!normals\+Testing@{normals\+Testing}}
+\index{normals\+Testing@{normals\+Testing}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{normals\+Testing()}{normalsTesting()}}
+{\footnotesize\ttfamily void Reconstruction\+::normals\+Testing (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target }\end{DoxyParamCaption})}
+
+
+
+Adjuste normals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & input cloud \\
+\hline
+{\em target} & output cloud \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_aa2b56e19c016b8c32ff99e7c5bacb515}\label{classReconstruction_aa2b56e19c016b8c32ff99e7c5bacb515}} 
+\index{Reconstruction@{Reconstruction}!pass\+Through\+Filter@{pass\+Through\+Filter}}
+\index{pass\+Through\+Filter@{pass\+Through\+Filter}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{pass\+Through\+Filter()}{passThroughFilter()}}
+{\footnotesize\ttfamily void Reconstruction\+::pass\+Through\+Filter (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud,  }\item[{std\+::string}]{field\+\_\+name,  }\item[{float}]{min\+\_\+limit,  }\item[{float}]{max\+\_\+limit }\end{DoxyParamCaption})}
+
+
+
+This A\+PI aims to filter a specific point cloud based on the specificaxis limit, which is known as pass\+Through\+Filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+{\em field\+\_\+name} & axis \\
+\hline
+{\em min\+\_\+limit} & Minimum limit \\
+\hline
+{\em max\+\_\+limit} & Maximum Limit \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_a0c9482066c467e769715d5ffde762225}\label{classReconstruction_a0c9482066c467e769715d5ffde762225}} 
+\index{Reconstruction@{Reconstruction}!point\+Cloud\+Centroid\+Alignment\+Adjusment@{point\+Cloud\+Centroid\+Alignment\+Adjusment}}
+\index{point\+Cloud\+Centroid\+Alignment\+Adjusment@{point\+Cloud\+Centroid\+Alignment\+Adjusment}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{point\+Cloud\+Centroid\+Alignment\+Adjusment()}{pointCloudCentroidAlignmentAdjusment()}}
+{\footnotesize\ttfamily void Reconstruction\+::point\+Cloud\+Centroid\+Alignment\+Adjusment (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud,  }\item[{double}]{x\+\_\+axis,  }\item[{double}]{y\+\_\+axis,  }\item[{double}]{z\+\_\+axis }\end{DoxyParamCaption})}
+
+
+
+This A\+PI aims to align two given pointcloud to its corresponding centroi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+{\em x\+\_\+axis} & x axis radian adjustment \\
+\hline
+{\em y\+\_\+axis} & y axis radian adjustment \\
+\hline
+{\em z\+\_\+axis} & z axis radian adjustment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_a9249ed4c0932b9fe460fada09ce38e67}\label{classReconstruction_a9249ed4c0932b9fe460fada09ce38e67}} 
+\index{Reconstruction@{Reconstruction}!point\+Cloud\+Clustering@{point\+Cloud\+Clustering}}
+\index{point\+Cloud\+Clustering@{point\+Cloud\+Clustering}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{point\+Cloud\+Clustering()}{pointCloudClustering()}}
+{\footnotesize\ttfamily void Reconstruction\+::point\+Cloud\+Clustering (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is designed to Input a specific point cloud and runan Euclidean Cluster Extraction (. 
+
+\begin{DoxyNote}{Note}
+The Clusterized point cloudwill output the biggest point cloud cluster as the valid target point cloud. In orderto define a cluster, it is crucial to determine the\+Minimum Cluster Size and the\+Cluster Tolerance.\+Once all the clusters are generated, these will be stacked in avector. In this vector, an algorithm will iterate throughout all elements and comparetheir cluster size. Based on this process, it will output the largest cluster as the validoutput point cloud
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_ad5749b9529d6f026ae9bb1084f63b276}\label{classReconstruction_ad5749b9529d6f026ae9bb1084f63b276}} 
+\index{Reconstruction@{Reconstruction}!point\+Cloud\+Normalise\+Upscale@{point\+Cloud\+Normalise\+Upscale}}
+\index{point\+Cloud\+Normalise\+Upscale@{point\+Cloud\+Normalise\+Upscale}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{point\+Cloud\+Normalise\+Upscale()}{pointCloudNormaliseUpscale()}}
+{\footnotesize\ttfamily void Reconstruction\+::point\+Cloud\+Normalise\+Upscale (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud }\end{DoxyParamCaption})}
+
+
+
+This A\+PI aims to smooth the surface of the Point\+Cloud via M\+LS (Moving\+Least\+Squares). 
+
+\begin{DoxyNote}{Note}
+Furthermore, it also upsamples the point cloudto a defined parameter using\+R\+A\+N\+D\+O\+M\+\_\+\+U\+N\+I\+F\+O\+R\+M\+\_\+\+D\+E\+N\+S\+I\+TY as the prefered method. This specific A\+PI uses a Kdtree for data searching and it is required to specify the\+Search Radiusfor determiningthe k-\/nearest neighbor for best fitting. This method required an input point cloud,and it will output a smoothed and upsampled point cloud
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_aab58cb52a7507ed64640c5e6645f296e}\label{classReconstruction_aab58cb52a7507ed64640c5e6645f296e}} 
+\index{Reconstruction@{Reconstruction}!point\+Cloud\+Outliers\+Filter@{point\+Cloud\+Outliers\+Filter}}
+\index{point\+Cloud\+Outliers\+Filter@{point\+Cloud\+Outliers\+Filter}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{point\+Cloud\+Outliers\+Filter()}{pointCloudOutliersFilter()}}
+{\footnotesize\ttfamily void Reconstruction\+::point\+Cloud\+Outliers\+Filter (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud }\end{DoxyParamCaption})}
+
+
+
+This A\+PI takes an reference cloud and outputs a processedpoint cloud with filtered data outliers. 
+
+\begin{DoxyNote}{Note}
+This method is based on the Statistical\+Outlier\+Removal Filter algoritm 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_ac7cff09bc04f6579b54932df8eb9b6ab}\label{classReconstruction_ac7cff09bc04f6579b54932df8eb9b6ab}} 
+\index{Reconstruction@{Reconstruction}!point\+Cloud\+Outliers\+Filter\+Manual@{point\+Cloud\+Outliers\+Filter\+Manual}}
+\index{point\+Cloud\+Outliers\+Filter\+Manual@{point\+Cloud\+Outliers\+Filter\+Manual}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{point\+Cloud\+Outliers\+Filter\+Manual()}{pointCloudOutliersFilterManual()}}
+{\footnotesize\ttfamily void Reconstruction\+::point\+Cloud\+Outliers\+Filter\+Manual (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud,  }\item[{int}]{mean\+\_\+k,  }\item[{double}]{std\+\_\+threshold }\end{DoxyParamCaption})}
+
+
+
+This A\+PI takes an reference cloud and outputs a processedpoint cloud with filtered data outliers. 
+
+\begin{DoxyNote}{Note}
+This method is based on the Statistical\+Outlier\+Removal Filter algoritm 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+{\em mean\+\_\+k} & configures the number of points (K) to use for mean distanceestimation. \\
+\hline
+{\em std\+\_\+threshold} & Sets the standard deviation multipler threshold \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_a1ea61518d67180a5d9d131d29a1b78c8}\label{classReconstruction_a1ea61518d67180a5d9d131d29a1b78c8}} 
+\index{Reconstruction@{Reconstruction}!point\+Cloud\+Plane\+Segment\+Operation@{point\+Cloud\+Plane\+Segment\+Operation}}
+\index{point\+Cloud\+Plane\+Segment\+Operation@{point\+Cloud\+Plane\+Segment\+Operation}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{point\+Cloud\+Plane\+Segment\+Operation()}{pointCloudPlaneSegmentOperation()}}
+{\footnotesize\ttfamily void Reconstruction\+::point\+Cloud\+Plane\+Segment\+Operation (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud }\end{DoxyParamCaption})}
+
+
+
+this A\+PI is degined to input a given Point\+Cloud and output a plane segmented point cloud. 
+
+\begin{DoxyNote}{Note}
+The logic behing this algorithm is based R\+A\+N\+S\+AC. Similarly it uses a Kdtree to search through the pointcloud. Also it uses R\+A\+N\+S\+AC as the segmentation method and Model Type. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_a621af3745966b359e10c02a570658c5c}\label{classReconstruction_a621af3745966b359e10c02a570658c5c}} 
+\index{Reconstruction@{Reconstruction}!point\+Cloud\+Plane\+Segment\+Operation\+Manual@{point\+Cloud\+Plane\+Segment\+Operation\+Manual}}
+\index{point\+Cloud\+Plane\+Segment\+Operation\+Manual@{point\+Cloud\+Plane\+Segment\+Operation\+Manual}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{point\+Cloud\+Plane\+Segment\+Operation\+Manual()}{pointCloudPlaneSegmentOperationManual()}}
+{\footnotesize\ttfamily void Reconstruction\+::point\+Cloud\+Plane\+Segment\+Operation\+Manual (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target\+\_\+cloud,  }\item[{double}]{threshold,  }\item[{double}]{iteration }\end{DoxyParamCaption})}
+
+
+
+This A\+PI is designed to Input a specific point cloud and runan Euclidean Cluster Extraction (. 
+
+\begin{DoxyNote}{Note}
+The Clusterized point cloudwill output the biggest point cloud cluster as the valid target point cloud. In orderto define a cluster, it is crucial to determine the\+Minimum Cluster Size and the\+Cluster Tolerance.\+Once all the clusters are generated, these will be stacked in avector. In this vector, an algorithm will iterate throughout all elements and comparetheir cluster size. Based on this process, it will output the largest cluster as the validoutput point cloud
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+cloud} & output cloud \\
+\hline
+{\em threshold} & Threshold value determination \\
+\hline
+{\em iteration} & Number of iterations \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classReconstruction_a8e8b20ec9b384b9dad21a3accfea98f2}\label{classReconstruction_a8e8b20ec9b384b9dad21a3accfea98f2}} 
 \index{Reconstruction@{Reconstruction}!point\+Cloud\+Scale\+Adjustment@{point\+Cloud\+Scale\+Adjustment}}
 \index{point\+Cloud\+Scale\+Adjustment@{point\+Cloud\+Scale\+Adjustment}!Reconstruction@{Reconstruction}}
 \subsubsection{\texorpdfstring{point\+Cloud\+Scale\+Adjustment()}{pointCloudScaleAdjustment()}}
 {\footnotesize\ttfamily std\+::vector$<$ pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr $>$ Reconstruction\+::point\+Cloud\+Scale\+Adjustment (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{input\+\_\+cloud\+\_\+1,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{input\+\_\+cloud\+\_\+2,  }\item[{bool}]{adjuster,  }\item[{bool}]{primary\+Axis\+Only }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+cloud\+\_\+1} & Target Point cloud \\
+\hline
+{\em input\+\_\+cloud\+\_\+2} & Reference Point cloud \\
+\hline
+{\em adjuster} & the initial pointcloud will be the one that is adjusted Selection \\
+\hline
+{\em primary\+Axis\+Only} & Axis Selection(\+Single or multiple) \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::vector$<$pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal$>$\+::\+Ptr$>$ 
+std\+::vector$<$pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal$>$\+::\+Ptr$>$ of Scaled Point Cloud. The first element is the scaled cloud whereas the second one is the refence point cloud. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classReconstruction_a42571b72e2c1ca984c259f3f4d319c75}\label{classReconstruction_a42571b72e2c1ca984c259f3f4d319c75}} 
+\index{Reconstruction@{Reconstruction}!poisson\+Reconstruction@{poisson\+Reconstruction}}
+\index{poisson\+Reconstruction@{poisson\+Reconstruction}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{poisson\+Reconstruction()}{poissonReconstruction()}}
+{\footnotesize\ttfamily void Reconstruction\+::poisson\+Reconstruction (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+cloud,  }\item[{pcl\+::\+Polygon\+Mesh\+::\+Ptr \&}]{target\+\_\+mesh }\end{DoxyParamCaption})}
+
+
+
+his A\+PI will require an input pointcloud and it will generatea reconstructed Polymesh based on the Poisson \hyperlink{classReconstruction}{Reconstruction} Algorithm 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+cloud} & input cloud \\
+\hline
+{\em target\+\_\+mesh} & output mesh \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_a8be86587dfe645c245474315ae67f5e4}\label{classReconstruction_a8be86587dfe645c245474315ae67f5e4}} 
+\index{Reconstruction@{Reconstruction}!set\+Input\+Cloud@{set\+Input\+Cloud}}
+\index{set\+Input\+Cloud@{set\+Input\+Cloud}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{set\+Input\+Cloud()}{setInputCloud()}}
+{\footnotesize\ttfamily void Reconstruction\+::set\+Input\+Cloud (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{cloud,  }\item[{std\+::string}]{path\+\_\+file,  }\item[{bool}]{mesh\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Set the Input Cloud object. 
+
+\begin{DoxyNote}{Note}
+This member class function will be used to input a given Mesh or\+Point\+Cloud. It designed to work with common.\+ply \& .objformats 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em cloud} & Point cloud used input the point cloud \\
+\hline
+{\em path\+\_\+file} & \+: string used to hold the path of the input file \\
+\hline
+{\em mesh\+\_\+type} & File type (0 obj 1 ply file) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReconstruction_a74cf80cebcf9600860881f57a8986823}\label{classReconstruction_a74cf80cebcf9600860881f57a8986823}} 
+\index{Reconstruction@{Reconstruction}!transform\+Point\+Cloud@{transform\+Point\+Cloud}}
+\index{transform\+Point\+Cloud@{transform\+Point\+Cloud}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{transform\+Point\+Cloud()}{transformPointCloud()}}
+{\footnotesize\ttfamily void Reconstruction\+::transform\+Point\+Cloud (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference\+\_\+for\+\_\+transform,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{reference,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{target }\end{DoxyParamCaption})}
+
+
+
+This A\+PI will transform one point cloud based on the input reference point cloud and use that transform pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+for\+\_\+transform} & input cloud. The transform will be extracted from here \\
+\hline
+{\em reference} & Input cloud \\
+\hline
+{\em target} & output cloud \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classReconstruction_a73c384d0419386505e5fe58a55b556c9}\label{classReconstruction_a73c384d0419386505e5fe58a55b556c9}} 
 \index{Reconstruction@{Reconstruction}!transform\+Verification@{transform\+Verification}}
 \index{transform\+Verification@{transform\+Verification}!Reconstruction@{Reconstruction}}
 \subsubsection{\texorpdfstring{transform\+Verification()}{transformVerification()}}
 {\footnotesize\ttfamily bool Reconstruction\+::transform\+Verification (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{cloud1,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{cloud2 }\end{DoxyParamCaption})}
 
+
+
+It will verify the transform and check based on a given thershold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cloud1} & cloud 1 \\
+\hline
+{\em cloud2} & cloud 2 \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true 
 
