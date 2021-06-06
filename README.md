@@ -115,3 +115,9 @@ In order to use this object ensure that **ScaleRatioICP.m** is added to the matl
 
 All the framework implementation was fully integrated and adapted. 
 
+### Documentation
+To visualise the documentation 
+
+```
+firefox html/index.html 
+```
