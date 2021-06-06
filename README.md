@@ -108,8 +108,9 @@ To execute:
 python3 poisson_open3d.py
 ```
 
-### Extra components.
-An Extra component added  and addapted to this framework is [SCaleRatioICP](https://github.com/linbaowei/ScaleRatioICP).
+### Extra components
+An Extra component added  and adapted to this framework is [SCaleRatioICP](https://github.com/linbaowei/ScaleRatioICP)
+The matlab components  of this class were added here under [ScaleRatioICP](https://github.com/esteban-andrade/3D-Reconstructrion-Scanner)
 In order to use this object ensure that **ScaleRatioICP.m** is added to the matlab path.
 
 All the framework implementation was fully integrated and adapted. 
