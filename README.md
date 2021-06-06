@@ -81,7 +81,7 @@ The last term is a command to generate output files. (Recommended to set to yes)
 ##### In order to execute:
 ```
 cd build 
-/3D_reconstruction_pipeline [Path_to_referenceFile] [Path_to_SCaling_file] [yes/no](Generate output files)
+./3D_reconstruction_pipeline [Path_to_referenceFile] [Path_to_SCaling_file] [yes/no](Generate output files)
 ```
 
 ##### Example
