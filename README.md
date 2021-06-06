@@ -76,7 +76,7 @@ In order to execute the framework it is neccesary to have two files *(.ply files
 The first file has to be the target file that needs to be processed *(Output from meshrroom*. The second file has to be the file that will be used for scaling*(Lidar)*
 
 The first term is the path to the reference target file. The second term is the path to the scale reference file.
-The last term is a command to generate output files. (Recommended to set to yes)
+The last term is a command to generate output files. (Recommended to set to yes). All the output saved on the *Meshes Folder*
 
 ##### In order to execute:
 ```
@@ -109,4 +109,8 @@ python3 poisson_open3d.py
 ```
 
 ### Extra components.
+An Extra component added  and addapted to this framework is [SCaleRatioICP](https://github.com/linbaowei/ScaleRatioICP).
+In order to use this object ensure that **ScaleRatioICP.m** is added to the matlab path.
+
+All the framework implementation was fully integrated and adapted. 
 
