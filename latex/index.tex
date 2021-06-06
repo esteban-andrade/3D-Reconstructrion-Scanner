@@ -1,0 +1,58 @@
+Threading,Synchronisation and Data Integrity. An aircraft is patrolling space surrounding a base station. The aircrafts task is to localise enemy aircraft (bogies) that enters the airspace and intercept the aircraft.\hypertarget{index_Description}{}\section{Description}\label{index_Description}
+Write a program in C++ using object oriented paradigms that shares data originating from a range of Mechatronics sensors between a number of threads. Ensure data integrity between threads and enable relating data between them via suitable data structure that enables time synchronisation and subsequently interpolation of data for task at hand. Supply appropriate auto-\/generated documentation utilising inline source mark-\/up\hypertarget{index_Rationale}{}\subsection{Rationale}\label{index_Rationale}
+In a Mechatronics System, sensors produce data at varying rates. Decisions need to be made based on correctly associated data in near real-\/time. Threading and synchronisation are ways to ensure the system performs as intended, with guarantees on the responsiveness of the system to incoming data changes, processing constraints and system behaviour.\hypertarget{index_Details}{}\section{Details}\label{index_Details}
+
+\begin{DoxyItemize}
+\item Student Name\+: Esteban Andrade~\newline
+
+\item Student ID\+: 12824583
+\end{DoxyItemize}\hypertarget{index_Notes}{}\section{Notes}\label{index_Notes}
+There is a debug section in the Data\+Synchronization Class. This was used for debugging all the predictions based on the speed and locations of the bogies.
+
+\begin{DoxyVerb}//#define DEBUG 1
+Uncomment this section to allow this to be displayed.\end{DoxyVerb}
+\hypertarget{index_Algorithms}{}\section{Algorithms}\label{index_Algorithms}
+The algorithms and concepts used include\+:
+\begin{DoxyItemize}
+\item Pure Pursuit
+\item P Cotroller
+\item Projectile Motion
+\end{DoxyItemize}\hypertarget{index_ac_doc_}{}\subsection{Pure Pursuit}\label{index_ac_doc_}
+The Pure pursuit Algorith will be used in order to start chansing the bogies The heart of the pure pursuit controller is directing the aircraft to travel along an arc from the current location to the goal point. This goal point is called the ​ lookahead point ​ and it is a point on the path that is the ​ lookahead distance from the aircraft. As the robot moves along the path, it aims for the lookahead point, which moves down the path with the robot. In this way, the robot can be considered to “pursue” the lookahead point. The lookahead point will be the predicted bogie position All this analysis will be done in reference from the friendly to the bogie. The point ( x, y ) which is one look-\/ahead distance l from the robot is one of points on the path.\+The Formulas include \begin{DoxyVerb}  x^2 +y^2 = L^2
+  x+D = r
+  D = r-x
+  (r-x)^2+y^2=r^2
+  r^2-2rx+x^2+y^2=r^2
+  2rx=L^2
+  r= L^2/2x
+  gamma = 2x/L^2
+
+  In order to obtain x, using ax+by+c=0
+ a = − tan(robot angle)
+ b =1
+ c = tan(robot angle) * robot x − robot y
+ The point-line distance formula is:
+ d = | ax + b y + c | / √ {a^2 + b^2}
+ x = | a * lookahead x + b * lookahead y + c | / √{a^2 + b^2}
+ with this angle gamma we can have a relationship between the linear and angular velocity:
+ w(omega) = gamma *(linear velocity)
+\end{DoxyVerb}
+\hypertarget{index_ac_doc_PI_Cotroller}{}\subsection{P\+I Cotroller}\label{index_ac_doc_PI_Cotroller}
+A PI controller was used in order to improve the navigation and steering paramaters. Where a gain K will be used to make the friendly either\+:
+\begin{DoxyItemize}
+\item Turn fast toward look-\/ahead point direction.
+\item Turn slowly toward look-\/ahead point direction
+\end{DoxyItemize}
+
+This gain will either increase or decrease both angular speed and linear speed in order to improve navigation. \begin{DoxyVerb}This value was simplifies as K, in order to maintain the 6G constrain and be easily modified 
+Kp+KI/s
+K+K/s
+\end{DoxyVerb}
+\hypertarget{index_ac_doc_Projectile_Motion}{}\subsection{Projectile Motion}\label{index_ac_doc_Projectile_Motion}
+The concept of projectile motion was used in order to predict the future position of the bogies. For this two simple positions with their respective timestamp were taken. With this we can calculate the distance travelled in x and y and with the given different in timestamp we can obtain the velocity vector. Once the velocity vector was used and gith a given offset in time in the future we can predict the future location of the bogies. \begin{DoxyVerb}vx = (second x - original x) /  time difference
+vy = (second y - original y) /  time difference
+predicted x = second x + velocity x * (time difference + future offset);
+predicted y = second y + velocity y * (time difference + future offset);
+\end{DoxyVerb}
+\hypertarget{index_Notes}{}\subsection{Notes}\label{index_Notes}
+In occasions the predicted orientation will have a small offset. However it will adjust and correct itself after a few iterations 

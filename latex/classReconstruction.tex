@@ -1,0 +1,167 @@
+\hypertarget{classReconstruction}{}\section{Reconstruction Class Reference}
+\label{classReconstruction}\index{Reconstruction@{Reconstruction}}
+
+
+The Class \hyperlink{classReconstruction}{Reconstruction} is used process the target pointcloud. It contain many implemeted algorithms used for filtering, segmentation, clusteting, etc.  
+
+
+
+
+{\ttfamily \#include $<$Reconstruction.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReconstruction_a081657a94b56a22f530f6661f356906a}\label{classReconstruction_a081657a94b56a22f530f6661f356906a}} 
+\hyperlink{classReconstruction_a081657a94b56a22f530f6661f356906a}{Reconstruction} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classReconstruction}{Reconstruction} object. \end{DoxyCompactList}\item 
+\hyperlink{classReconstruction_ac7ac62559b5825dcec2a760946897f40}{Reconstruction} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classReconstruction}{Reconstruction} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReconstruction_a039a0f69fa30bd88ffadf608846a316d}\label{classReconstruction_a039a0f69fa30bd88ffadf608846a316d}} 
+\hyperlink{classReconstruction_a039a0f69fa30bd88ffadf608846a316d}{$\sim$\+Reconstruction} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \hyperlink{classReconstruction}{Reconstruction} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReconstruction_a8be86587dfe645c245474315ae67f5e4}\label{classReconstruction_a8be86587dfe645c245474315ae67f5e4}} 
+void \hyperlink{classReconstruction_a8be86587dfe645c245474315ae67f5e4}{set\+Input\+Cloud} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string, bool)
+\begin{DoxyCompactList}\small\item\em Set the Input Cloud object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReconstruction_a16d79600ed8684f67c1c56456bd9142b}\label{classReconstruction_a16d79600ed8684f67c1c56456bd9142b}} 
+void {\bfseries normals\+Direction\+Adjustment} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
+\item 
+\mbox{\Hypertarget{classReconstruction_aab58cb52a7507ed64640c5e6645f296e}\label{classReconstruction_aab58cb52a7507ed64640c5e6645f296e}} 
+void {\bfseries point\+Cloud\+Outliers\+Filter} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\item 
+\mbox{\Hypertarget{classReconstruction_a1ea61518d67180a5d9d131d29a1b78c8}\label{classReconstruction_a1ea61518d67180a5d9d131d29a1b78c8}} 
+void {\bfseries point\+Cloud\+Plane\+Segment\+Operation} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\item 
+\mbox{\Hypertarget{classReconstruction_a9249ed4c0932b9fe460fada09ce38e67}\label{classReconstruction_a9249ed4c0932b9fe460fada09ce38e67}} 
+void {\bfseries point\+Cloud\+Clustering} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\item 
+\mbox{\Hypertarget{classReconstruction_ad5749b9529d6f026ae9bb1084f63b276}\label{classReconstruction_ad5749b9529d6f026ae9bb1084f63b276}} 
+void {\bfseries point\+Cloud\+Normalise\+Upscale} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\item 
+\mbox{\Hypertarget{classReconstruction_a42571b72e2c1ca984c259f3f4d319c75}\label{classReconstruction_a42571b72e2c1ca984c259f3f4d319c75}} 
+void {\bfseries poisson\+Reconstruction} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
+\item 
+std\+::vector$<$ pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr $>$ \hyperlink{classReconstruction_a8e8b20ec9b384b9dad21a3accfea98f2}{point\+Cloud\+Scale\+Adjustment} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, bool, bool)
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classReconstruction_aa26b3c0a0b3739c330b2c48f874c15c9}{get\+Scale} ()
+\begin{DoxyCompactList}\small\item\em Get the Scale object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReconstruction_a1b7f0942d1540ace69e53c28d3b82023}\label{classReconstruction_a1b7f0942d1540ace69e53c28d3b82023}} 
+void {\bfseries cloud\+To\+Poly\+Mesh} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
+\item 
+std\+::vector$<$ pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr $>$ \hyperlink{classReconstruction_a6c2151dd4224cee397adb2b353e20e9b}{manual\+Scale\+Adjuster} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, double)
+\item 
+\mbox{\Hypertarget{classReconstruction_a46cab918422a3c74bced403043968992}\label{classReconstruction_a46cab918422a3c74bced403043968992}} 
+void {\bfseries convert\+P\+L\+Yto\+P\+CL} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string)
+\item 
+\mbox{\Hypertarget{classReconstruction_afab7e493f5aee46722977acd64658c7a}\label{classReconstruction_afab7e493f5aee46722977acd64658c7a}} 
+void {\bfseries convert\+Poly\+Meshto\+P\+LY} (pcl\+::\+Polygon\+Mesh\+::\+Ptr \&, std\+::string)
+\item 
+\mbox{\Hypertarget{classReconstruction_a82138f7b299c7047f53181b6abb70c81}\label{classReconstruction_a82138f7b299c7047f53181b6abb70c81}} 
+void {\bfseries downsample\+Point\+Cloud\+Voxel\+Grid} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, float, float, float)
+\item 
+\mbox{\Hypertarget{classReconstruction_aad287c118ab81ecf00c29f55314fc237}\label{classReconstruction_aad287c118ab81ecf00c29f55314fc237}} 
+void {\bfseries convert\+P\+C\+Lto\+P\+LY} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string)
+\item 
+\mbox{\Hypertarget{classReconstruction_ac2d96a55242b1849637da44e4e32f725}\label{classReconstruction_ac2d96a55242b1849637da44e4e32f725}} 
+void {\bfseries import\+P\+L\+Yto\+Polymesh} (std\+::string, pcl\+::\+Polygon\+Mesh\+::\+Ptr \&)
+\item 
+\mbox{\Hypertarget{classReconstruction_aa2b56e19c016b8c32ff99e7c5bacb515}\label{classReconstruction_aa2b56e19c016b8c32ff99e7c5bacb515}} 
+void {\bfseries pass\+Through\+Filter} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, std\+::string, float, float)
+\item 
+\mbox{\Hypertarget{classReconstruction_ac7cff09bc04f6579b54932df8eb9b6ab}\label{classReconstruction_ac7cff09bc04f6579b54932df8eb9b6ab}} 
+void {\bfseries point\+Cloud\+Outliers\+Filter\+Manual} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, int, double)
+\item 
+\mbox{\Hypertarget{classReconstruction_a621af3745966b359e10c02a570658c5c}\label{classReconstruction_a621af3745966b359e10c02a570658c5c}} 
+void {\bfseries point\+Cloud\+Plane\+Segment\+Operation\+Manual} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, double, double)
+\item 
+\mbox{\Hypertarget{classReconstruction_a0c9482066c467e769715d5ffde762225}\label{classReconstruction_a0c9482066c467e769715d5ffde762225}} 
+void {\bfseries point\+Cloud\+Centroid\+Alignment\+Adjusment} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, double, double, double)
+\item 
+\mbox{\Hypertarget{classReconstruction_adbc413f7611f3984cbfcff77b9c23df6}\label{classReconstruction_adbc413f7611f3984cbfcff77b9c23df6}} 
+void {\bfseries normals\+Re\+Adjustement} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\item 
+\mbox{\Hypertarget{classReconstruction_ab8b679093ca295de818b4bdf84ec79af}\label{classReconstruction_ab8b679093ca295de818b4bdf84ec79af}} 
+void {\bfseries normals\+Testing} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\item 
+\mbox{\Hypertarget{classReconstruction_a74cf80cebcf9600860881f57a8986823}\label{classReconstruction_a74cf80cebcf9600860881f57a8986823}} 
+void {\bfseries transform\+Point\+Cloud} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\item 
+bool \hyperlink{classReconstruction_a73c384d0419386505e5fe58a55b556c9}{transform\+Verification} (pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&, pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Class \hyperlink{classReconstruction}{Reconstruction} is used process the target pointcloud. It contain many implemeted algorithms used for filtering, segmentation, clusteting, etc. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classReconstruction_ac7ac62559b5825dcec2a760946897f40}\label{classReconstruction_ac7ac62559b5825dcec2a760946897f40}} 
+\index{Reconstruction@{Reconstruction}!Reconstruction@{Reconstruction}}
+\index{Reconstruction@{Reconstruction}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{Reconstruction()}{Reconstruction()}}
+{\footnotesize\ttfamily Reconstruction\+::\+Reconstruction (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{cloud,  }\item[{std\+::string}]{path\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Construct a new \hyperlink{classReconstruction}{Reconstruction} object. 
+
+\begin{DoxyNote}{Note}
+Only for ply file. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em parameter-\/pointcloud} & point cloud used to hold the input mesh \\
+\hline
+{\em parameter-\/path} & string used to hold the path of the input file \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classReconstruction_aa26b3c0a0b3739c330b2c48f874c15c9}\label{classReconstruction_aa26b3c0a0b3739c330b2c48f874c15c9}} 
+\index{Reconstruction@{Reconstruction}!get\+Scale@{get\+Scale}}
+\index{get\+Scale@{get\+Scale}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{get\+Scale()}{getScale()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Reconstruction\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Scale object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$double$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classReconstruction_a6c2151dd4224cee397adb2b353e20e9b}\label{classReconstruction_a6c2151dd4224cee397adb2b353e20e9b}} 
+\index{Reconstruction@{Reconstruction}!manual\+Scale\+Adjuster@{manual\+Scale\+Adjuster}}
+\index{manual\+Scale\+Adjuster@{manual\+Scale\+Adjuster}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{manual\+Scale\+Adjuster()}{manualScaleAdjuster()}}
+{\footnotesize\ttfamily std\+::vector$<$ pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr $>$ Reconstruction\+::manual\+Scale\+Adjuster (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{input\+\_\+cloud,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal$>$\+::\+Ptr$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classReconstruction_a8e8b20ec9b384b9dad21a3accfea98f2}\label{classReconstruction_a8e8b20ec9b384b9dad21a3accfea98f2}} 
+\index{Reconstruction@{Reconstruction}!point\+Cloud\+Scale\+Adjustment@{point\+Cloud\+Scale\+Adjustment}}
+\index{point\+Cloud\+Scale\+Adjustment@{point\+Cloud\+Scale\+Adjustment}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{point\+Cloud\+Scale\+Adjustment()}{pointCloudScaleAdjustment()}}
+{\footnotesize\ttfamily std\+::vector$<$ pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr $>$ Reconstruction\+::point\+Cloud\+Scale\+Adjustment (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{input\+\_\+cloud\+\_\+1,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{input\+\_\+cloud\+\_\+2,  }\item[{bool}]{adjuster,  }\item[{bool}]{primary\+Axis\+Only }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$pcl\+::\+Point\+Cloud$<$pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal$>$\+::\+Ptr$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classReconstruction_a73c384d0419386505e5fe58a55b556c9}\label{classReconstruction_a73c384d0419386505e5fe58a55b556c9}} 
+\index{Reconstruction@{Reconstruction}!transform\+Verification@{transform\+Verification}}
+\index{transform\+Verification@{transform\+Verification}!Reconstruction@{Reconstruction}}
+\subsubsection{\texorpdfstring{transform\+Verification()}{transformVerification()}}
+{\footnotesize\ttfamily bool Reconstruction\+::transform\+Verification (\begin{DoxyParamCaption}\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{cloud1,  }\item[{pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+G\+B\+Normal $>$\+::Ptr \&}]{cloud2 }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Reconstruction_8h}{Reconstruction.\+h}\item 
+Reconstruction.\+cpp\end{DoxyCompactItemize}
