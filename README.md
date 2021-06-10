@@ -43,7 +43,7 @@ The requirements include
 - Matlab 
 - OpenCV <= 3.9.2
 - Boost
-- C++ (14 Miniumum)
+- C++ (14 Minimum)
 - Python (3.6.9 Minimum)
 - Ninja Compiler (Optional).
 
