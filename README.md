@@ -26,7 +26,7 @@ The respective settings and best configuration for each node can be referenced o
 
 In the above documents there will be documentation of what settings are required for each node. (Refer to section 2.2 on the [Documentation](https://github.com/esteban-andrade/3D-Reconstructrion-Scanner/blob/main/A21%20-%2004017%20Final%20Report%20Esteban%20Andrade%20Zambrano.pdf)).
 
-Once the photogrammetric process has finished the mesh can be retrieved from either the *meshing* or *filter mesh node* as ..obj file  from the cache folder from meshroom.
+Once the photogrammetric process has finished the mesh can be retrieved from either the *meshing* or *filter mesh node* as .obj file  from the cache folder from meshroom.
 
 For best result, as these meshes will be used in the *Reconstruction Framework*, convert the meshes from *.obj* to *.ply* using **[Meshlab](https://www.meshlab.net/)**.
 
