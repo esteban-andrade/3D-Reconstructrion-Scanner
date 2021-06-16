@@ -60,7 +60,7 @@ cmake ..
 make
 ```
 ##### Prefered Method
-The prefered method is using Ninja Compiler as it faster than standard gcc
+The prefered method is using Ninja Compiler as it is faster than standard gcc
 
 ```
 git clone https://github.com/esteban-andrade/3D-Reconstructrion-Scanner
