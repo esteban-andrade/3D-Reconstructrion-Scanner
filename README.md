@@ -38,7 +38,7 @@ This framework was developed in Linux. However windows Functionality was added i
 
 The requirements include
 
-- PCL Library (1.2 Minimum) (1.8 Ideal)
+- PCL Library <=1.2 (1.2 Minimum) (Developed on 1.8)
 - Open3D
 - Matlab 
 - OpenCV (3.9.2 Minimum )
