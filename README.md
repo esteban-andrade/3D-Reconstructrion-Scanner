@@ -90,7 +90,7 @@ cd build
 ```
 
 #### Expected Result
-The expeted result will output a viewer with all the steps of the pipeline processing.
+The expected result will output a viewer with all the steps of the pipeline processing.
 If There is the need to change parameters, change then at the top of the *Reconstruction.cpp* file. 
 To change the filtering adjust as needed on *main.cpp*. 
 Ideally the default settings will work with most datasets.
