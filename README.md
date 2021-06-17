@@ -73,10 +73,10 @@ ninja
 ### Execution
 
 In order to execute the framework it is neccesary to have two files *(.ply files)*
-The first file has to be the target file that needs to be processed *(Output from meshroom)*. The second file has to be the file that will be used for scaling*(Lidar)*
+The first file has to be the target file that needs to be processed *(Output from meshroom)*. The second file has to be the file that will be used for scaling *(Lidar)*
 
 The first term is the path to the reference target file. The second term is the path to the scale reference file.
-The last term is a command to generate output files. (Recommended to set to yes). All the output saved on the *Meshes Folder*
+The last term is a command to generate output files. *(Recommended to set to yes)*. All the output saved on the *Meshes Folder*
 
 ##### In order to execute:
 ```
