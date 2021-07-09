@@ -58,7 +58,6 @@ if saver == True:
 
 
 
-#http://www.open3d.org/docs/latest/tutorial/Advanced/surface_reconstruction.html
 
 
 print("\nLoad a ply point cloud No Upscaling, print it, and render it")
