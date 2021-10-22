@@ -117,7 +117,7 @@ All the framework implementation was fully integrated and adapted.
 
 ### Documentation
 To visualise the documentation 
-
+Unzip the Documentation Folder
 ```
 firefox html/index.html 
 ```
